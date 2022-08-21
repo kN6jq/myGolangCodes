@@ -1,4 +1,4 @@
-package main
+package xray_subdomain_extraction
 
 import (
 	"bufio"
@@ -33,12 +33,8 @@ type Extra struct {
 	Detail string `json:"detail"`
 }
 
-func main() {
-	Read2()
-
-}
-
-func Read2() {
+func Xray_subdomain() {
+	// xray subdomain --target dxy.cn --json-output dxy.cn.json
 	//获得一个file
 	f, err := os.Open("dxy.cn.json")
 	if err != nil {

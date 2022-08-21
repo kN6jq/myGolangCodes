@@ -1,8 +1,6 @@
 package some_function
 
 import (
-	"crypto/md5"
-	"encoding/hex"
 	"encoding/json"
 )
 
@@ -14,10 +12,4 @@ func SliceSToString(slices [][]string) (result string) {
 	}
 	result = string(b)
 	return
-}
-
-// 获取字符串的md5 hash值
-func GetMD5Hash(text string) string {
-	hash := md5.Sum([]byte(text))
-	return hex.EncodeToString(hash[:])
 }
